@@ -1,0 +1,1 @@
+This is the readme for week 2's projects.
