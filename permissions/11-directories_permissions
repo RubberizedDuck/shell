@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -type d 755 /root/shell/permissions/
+find /root/shell/permissions -type d -exec chmod 755
