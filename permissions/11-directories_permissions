@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 1755
+chmod -type d 755 /root/shell/permissions/
