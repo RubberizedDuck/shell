@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 777 /root/shell/permissions/dir
+chmod 777 /root/shell/permissions/dir*
