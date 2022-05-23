@@ -1,2 +1,2 @@
 #!/bin/bash
-find /root/shell/permissions/dir -type d -exec chmod 711
+find /root/shell/permissions/dir -type d -exec chmod 711 {} +
