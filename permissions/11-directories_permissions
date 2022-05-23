@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ugo+x /root/shell/permissions
+chmod ugo+x . dir*
