@@ -1,2 +1,2 @@
 #!/bin/bash
-tail -1D iacta
+tail -1 p iacta
