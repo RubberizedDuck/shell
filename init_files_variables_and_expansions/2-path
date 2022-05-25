@@ -1,2 +1,2 @@
 #!/bin/bash
-echo OLDDIR=$OLDDIR:/action
+export PATH=$OLDDIR:/action
