@@ -1,2 +1,2 @@
 #!/bin/bash
-echo PATH=$OLDDIR:/action
+echo OLDDIR=$OLDDIR:/action
