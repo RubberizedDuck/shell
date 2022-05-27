@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'NR % 2 == 0'
+echo $(split -n r/1/2)
