@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+var="Best School" for var in "best School" do echo $var echo $var echo $var
