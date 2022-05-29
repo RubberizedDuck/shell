@@ -1,2 +1,16 @@
 #!/usr/bin/env bash
-var="Best School" for var in "best School" do echo $var echo $var echo $var
+# This script loops "Best School" 10 times
+var="Best School"
+for var in "Best School"
+do
+    echo "$var"
+    echo "$var"
+    echo "$var"
+    echo "$var"
+    echo "$var"
+    echo "$var"
+    echo "$var"
+    echo "$var"
+    echo "$var"
+    echo "$var"
+done
