@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# A script to show PID of bash without command ps
+pid="$(pidof bash)"
+for i in $pid
+do
+    echo "$i bash"
+done
