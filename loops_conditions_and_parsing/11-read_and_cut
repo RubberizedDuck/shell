@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # This script reads and cuts /etc/passwd
-i="0"
-while [ $i == 0 ]
+input="/etc/passwd"
+while read -r line
 do
-   cat /etc/passwd | cut -d : -f 1,3,6
-    i=$((i+1))
-done
+   echo "$line" | cut -d : -f 1,3,6
+done < "$input"
