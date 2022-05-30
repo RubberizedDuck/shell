@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
 # A script to show PID of bash without command ps
-IDS="$(pidof -x bash)"
-for i in $IDS
-do
-    echo "$i bash"
-done
+pgrep -l bash
