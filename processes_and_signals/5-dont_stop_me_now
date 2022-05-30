@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script uses the kill command to stop processes
+kill -9
