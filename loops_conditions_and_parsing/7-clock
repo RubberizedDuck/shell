@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This is a scrip that tells the time
+hour="0"
+minute="1"
+while [ $hour -le 12 ]
+do
+    echo "Hour: $hour"
+    hour=$((hour+1))
+while [ $minute -le 59 ]
+do
+    echo "Minute: $minute"
+    minute=$((minute+1))
+done
+done
