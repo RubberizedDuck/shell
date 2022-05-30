@@ -9,6 +9,10 @@ else
     if [ -s $file ]
     then
 	echo "$file file is not empty"
+	if [ -f $file ]
+	then
+	    echo "$file is a regular file"
+	    fi
     else
 	echo "$file file is empty"
 	if [ -f $file ]
