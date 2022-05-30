@@ -5,13 +5,14 @@ bad="bad luck"
 good="good luck"
 while [ $i -le 10 ]
 do
-    echo "Best School"
     i=$((i+1))
-    if [ $i == 4 ]
+    if [ $i -eq 4 ]
     then
       echo "$bad"
-    elif [ $i == 8 ]
+    elif [ $i -eq 8 ]
     then
-      echo "$good"
+	echo "$good"
+    else
+	echo "Best School"
 	fi
 done
