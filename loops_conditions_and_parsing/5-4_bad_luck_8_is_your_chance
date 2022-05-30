@@ -3,7 +3,7 @@
 i="0"
 bad="bad luck"
 good="good luck"
-while [ $i -le 10 ]
+while [ $i -le 9 ]
 do
     i=$((i+1))
     if [ $i -eq 4 ]
