@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # This script stops any script from running
-pkill -f 4-to_infinity_and_beyond 1>&2
+pkill -f 4-to_infinity_and_beyond
+echo "$?" 1>&2
