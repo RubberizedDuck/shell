@@ -1,3 +1,14 @@
 #!/usr/bin/env bash
 # This script stops any script from running
-pkill -f 4-to_infinity_and_beyond 2>&1
+pkill -f 4-to_infinity_and_beyond
+status="$?"
+if [ $status == 0 ]
+then
+    echo 1>&2
+    echo "One or more processes matched the criteria"
+fi
+if [ $status == 1 ]
+then
+    echo 1>&2
+    echo "No processes matched"
+fi
