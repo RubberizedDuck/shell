@@ -6,9 +6,9 @@ pass="0 One or more processes matched the criteria"
 fail="1 No processes matched"
 if [ $status == 0 ]
 then
-    echo "$pass"
+    echo "$pass" >&2
 fi
 if [ $status == 1 ]
 then
-    echo "$fail"
+    echo "$fail" >&2
 fi
