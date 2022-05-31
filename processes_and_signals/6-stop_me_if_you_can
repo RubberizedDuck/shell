@@ -8,5 +8,5 @@ then
 fi
 if [ $status == 1 ]
 then
-    printf "$status No processes matched\n" >&2
+    echo "$status No processes matched" >&2
 fi
