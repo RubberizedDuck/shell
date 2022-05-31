@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # This script stops any script from running
 status="$?"
+pkill -f 4-to_infinity_and_beyond
 if [ "$status" == 0 ]
 then
-    echo "0 One or more processes matched the criteria"
+    echo "$? One or more processes matched the criteria"
 fi
 if [ "$status" == 1 ]
 then
-    echo "1 No processes matched"
+    echo "$? No processes matched"
 fi
