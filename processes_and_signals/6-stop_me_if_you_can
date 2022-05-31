@@ -5,8 +5,8 @@ pkill -f 4-to_infinity_and_beyond
 if [ "$status" == 0 ]
 then
     echo "0 One or more processes matched the criteria"
-    if [ "$status" == 1 ]
-    then
-    echo "1 No processes matched"
 fi
+if [ "$status" == 1 ]
+then
+    echo "1 No processes matched"
 fi
