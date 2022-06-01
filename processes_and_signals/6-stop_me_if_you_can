@@ -8,5 +8,5 @@ then
 fi
 if [[ $status == 1 ]]
 then
-    echo "$status No processes matched" >>/dev/stderr
+    echo "$status No processes matched"
 fi
