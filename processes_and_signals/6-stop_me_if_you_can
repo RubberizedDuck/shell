@@ -2,11 +2,12 @@
 # This script stops any script from running
 pkill -f 4-to_infinity_and_beyond
 status="$?"
+echo "$status"
 if [[ $status == 0 ]]
 then
-    echo "$status One or more processes matched the criteria"
+    echo "One or more processes matched the criteria" 1>&2
 fi
 if [[ $status == 1 ]]
 then
-    echo "$status No processes matched"
+    echo "No processes matched" 1>&2
 fi
