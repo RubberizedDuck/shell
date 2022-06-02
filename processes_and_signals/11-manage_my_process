@@ -11,14 +11,14 @@ then
     
 elif [ "$firstarg" == "stop" ]
 then
-    pkill -f ./manage_my_process &
+    pkill -f ./manage_my_process
     rm /var/run/my_process.pid
     echo "manage_my_process stopped"
     # Restarts file "manage_my_process" when "restart" argument is passed.
     
 elif [ "$firstarg" == "restart" ]
 then
-    pkill -f ./manage_my_process &
+    pkill -f ./manage_my_process
     rm /var/run/my_process.pid
     ./manage_my_process &
     echo $! >> /var/run/my_process.pid &
