@@ -20,4 +20,4 @@ done
 
 # Removes file and terminates itself when receiving SIGQUIT or SIGTERM signal
 
-trap "rm /var/run/myscript.pid; pkill -9 -f 10-process_and_pid_file" SIGQUIT || SIGTERM
+trap "rm /var/run/myscript.pid; exit" SIGQUIT || SIGTERM
