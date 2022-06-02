@@ -7,13 +7,9 @@
 echo ${PPID} > /var/run/myscript.pid
 trap "echo I hate the kill command" 15
 trap "echo Y U no love me?!" 2
-kill=$pkill
+trap "rm /var/run/myscript.pid pkill -9 -f '10-process_and_pid_file'" 3
 while true
 do
     echo "To infinity and beyond"
     sleep 2
 done
-if [ $kill == true ]
-then
-    rm /var/run/myscript.pid
-fi
