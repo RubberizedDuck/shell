@@ -5,9 +5,9 @@
 # Displays 'Y U no love me?' when receiving a SIGINT signal
 # Deletes the file created and terminates itself when receiving SIGQUIT or SIGTERM signal
 echo ${PPID} > /var/run/myscript.pid
-trap "echo I hate the kill command; pkill -9 -f '10-process_and_pid_file'" SIGTERM
+trap "echo I hate the kill command;rm /var/run/myscript.pid; pkill -9 -f 10-process_and_pid_file" SIGTERM
 trap "echo Y U no love me?!" 2
-trap "rm /var/run/myscript.pid; pkill -9 -f '10-process_and_pid_file'" SIGQUIT
+trap "rm /var/run/myscript.pid; pkill -9 -f 10-process_and_pid_file" SIGQUIT
 while true
 do
     echo "To infinity and beyond"
