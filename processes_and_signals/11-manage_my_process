@@ -12,14 +12,14 @@ then
     
 elif [ "$s" == "stop" ]
 then
-    pkill -f manage_my_process
+    killall
     rm /var/run/my_process.pid
     echo "manage_my_process stopped"
     # Restarts file "manage_my_process" when "restart" argument is passed.
     
 elif [ "$s" == "restart" ]
 then
-    pkill -f manage_my_process
+    killall
     rm /var/run/my_process.pid
     sudo manage_my_process
     echo ${PPID} > /var/run/my_process.pid
