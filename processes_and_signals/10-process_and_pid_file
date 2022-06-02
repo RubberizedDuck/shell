@@ -1,15 +1,27 @@
 #!/usr/bin/env bash
 # This script creates a file which displays it's pid
-# Displays 'To infinity and beyond' indefinitely
-# Displays 'I hate the kill command' when receiving a SIGTERM signal
-# Displays 'Y U no love me?' when receiving a SIGINT signal
-# Deletes the file created and terminates itself when receiving SIGQUIT or SIGTERM signal
 echo ${PPID} > /var/run/myscript.pid
+
+# Displays 'I hate the kill command' when receiving a SIGTERM signal
+
 trap "echo I hate the kill command" 15
+
+# Displays 'Y U no love me?' when receiving a SIGINT signal
+
 trap "echo Y U no love me?!" 2
-trap "rm /var/run/myscript.pid | pkill -9 -f 10-process_and_pid_file" 3 15
+
+# Displays 'To infinity and beyond' indefinitely
+
 while true
 do
     echo "To infinity and beyond"
     sleep 2
 done
+
+# Terminates itself when receiving SIGQUIT or SIGTERM signal
+
+trap "pkill -9 -f 10-process_and_pid_file" 3 || 15
+
+# Deletes file when receiving SIGQUIT or SIGTERM signal
+
+trap "rm /var/run/myscript.pid" 3 || 15
