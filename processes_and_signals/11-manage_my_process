@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 # This script manages the file 'manage_my_process'
-s="$1"
 # Starts file "manage_my_process" when "start" argument is passed.
 
-if [ "$s" == "start" ]
+if [ "${1}" == "start" ]
 then
-    sudo ./manage_my_process
+    ./manage_my_process
     echo ${PPID} > /var/run/my_process.pid
     echo "manage_my_process started"
     # Stops file "manage_my_process" when "stop" argument is passed. 
@@ -21,7 +20,7 @@ elif [ "$s" == "restart" ]
 then
     killall
     rm /var/run/my_process.pid
-    sudo ./manage_my_process
+    ./manage_my_process
     echo ${PPID} > /var/run/my_process.pid
     echo "manage_my_process restarted"
     # Prints "Usage: manage_my_process {start|stop|restart}" if any other/no argument is passed
