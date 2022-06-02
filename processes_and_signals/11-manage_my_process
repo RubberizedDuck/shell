@@ -18,7 +18,7 @@ then
     
 elif [ "$firstarg" == "restart" ]
 then
-    pkill -f ./manage_my_process
+    pkill -f ./manage_my_process &
     rm /var/run/my_process.pid
     ./manage_my_process &
     echo ${PPID} >> /var/run/my_process.pid &
